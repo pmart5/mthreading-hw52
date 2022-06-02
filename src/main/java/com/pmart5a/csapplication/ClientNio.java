@@ -13,7 +13,7 @@ public class ClientNio {
     private static final String HOST = "localhost";
     private static final int bufferCapacity = 2 << 10;
 
-    private static void readFromBuffer (SocketChannel socketChannel, ByteBuffer inputBuffer) {
+    private static void readFromBuffer(SocketChannel socketChannel, ByteBuffer inputBuffer) {
         try {
             int bytesCount = socketChannel.read(inputBuffer);
             System.out.println(new String(inputBuffer.array(), 0, bytesCount,
